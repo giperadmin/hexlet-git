@@ -213,4 +213,54 @@ doc/**/*.txt
 
 ■ Иногда бывает такое, что программист случайно уже добавил в репозиторий файл, который нужно проигнорировать. В этой ситуации недостаточно обновить правила игнорирования. Дополнительно придется удалить файл или директорию из Git с помощью git rm и закоммитить
 
+■ если добавить в .gitignore файл, который уже был в репозитории ничего не произойдет. Он останется скомпроментированным.
+
+
+=======
+
+
+Урок 14
+<<<<<<< Updated upstream
+Тема: Stash (Припрятывание)
+
+■ В Git существует набор команд, позволяющий прятать изменения в рабочей директории и восстанавливать их при необходимости.
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.md
+        modified:   notes.txt
+
+
+user@SuperComp MINGW64 /c/c-prog/hexlet-git (main)
+$ git stash
+Saved working directory and index state WIP on main: 98e3a57 Пройдено 13 уроков
+
+user@SuperComp MINGW64 /c/c-prog/hexlet-git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+■ Команда git stash не удаляет файлы. Они попадают в специальное место внутри директории .git на временное хранение. Эта команда не трогает новые файлы, так как они еще не являются частью репозитория.
+
+■ git stash pop # После выполнения всех нужных изменений в чистой рабочей директории можно вернуть спрятанные изменения с помощью команды git stash pop
+
+■ Стэш в Git работает по принципу стека. Он позволяет сохранить внутрь любое количество изменений и восстановить их в обратном порядке:
+git stash
+# Изменяем файлы
+git stash
+# Возвращаем последние изменения
+git stash pop
+# Возвращаем предпоследние изменения
+git stash pop
+=======
+Тема: Stash
+
+■ 
+>>>>>>> Stashed changes
+
 =======
