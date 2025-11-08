@@ -1,23 +1,17 @@
 #include <stdio.h>
-
 int main(void)
 {
+    int a=3, b=4;
+    double res = 0.75;
 
-        char station_code;   // буквенный код метеостанции
-        int station_number;  // числовой код метеостанции
-        float temperature;   // температура
-        double pressure; // атмфосферное давление
+    printf("||-----|-----|-----|-----||\n");
+    printf("|| act | one | two | res ||\n");
+    printf("||=====+=====+=====+=====||\n");
+    printf("||%5c|%-5.d|%-5.d|%5.5d||\n", '+', a, b, a+b);
+    printf("||%5c|%5.d|%5.d|%+.4d||\n", '-', a, b, a-b);
+    printf("||%5c|%5.d|%-5.d|%5.5d||\n", '*', a, b, a*b);
+    printf("||%-5.0c|%-5.0d|%5.d|%5.3f||\n", '/', a, b, res);
+    printf("===========================");
 
-        station_code = 'F';
-        station_number = 93;
-        temperature = 0;
-        pressure = 755.63;
-
-        // Здесь напишите вызов функции printf
-        printf("|%c%.3d|%+6.2f|%.1f|",station_code,station_number,temperature,pressure);
-        // Правильно составленный вызов функции printf
-        // для данных, указанных выше, выведет следующую строку
-        // |F93|25.54|755.6|
-
-        return 0;
+    return(0);
 }
