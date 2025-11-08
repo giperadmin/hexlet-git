@@ -1,17 +1,19 @@
-#include <stdio.h>
+#include <stdio.h> //F9 to RUN in Code::Blocks
 int main(void)
 {
-    int a=3, b=4;
-    double res = 0.75;
+    int lim=19, res, found=156;
+    for (int i = 1; i <= lim; i++){
+        for (int j = 1; j <= lim; j++)
+            {
+            res = i * j;
+            /*if (res==found)
+            {printf("%d * %d = %d\n",i,j,res);
+            }*/
+            printf("%-5d", res);
+            }
+        printf("\n\n");
+        }
 
-    printf("||-----|-----|-----|-----||\n");
-    printf("|| act | one | two | res ||\n");
-    printf("||=====+=====+=====+=====||\n");
-    printf("||%5c|%-5.d|%-5.d|%5.5d||\n", '+', a, b, a+b);
-    printf("||%5c|%5.d|%5.d|%+.4d||\n", '-', a, b, a-b);
-    printf("||%5c|%5.d|%-5.d|%5.5d||\n", '*', a, b, a*b);
-    printf("||%-5.0c|%-5.0d|%5.d|%5.3f||\n", '/', a, b, res);
-    printf("===========================");
 
     return(0);
 }
