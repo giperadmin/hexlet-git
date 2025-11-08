@@ -10,11 +10,11 @@ int main(void)
 
         station_code = 'F';
         station_number = 93;
-        temperature = 25.54;
+        temperature = 0;
         pressure = 755.63;
 
         // Здесь напишите вызов функции printf
-        printf("|%c%d|%.2f|%.1f|",station_code,station_number,temperature,pressure);
+        printf("|%c%.3d|%+6.2f|%.1f|",station_code,station_number,temperature,pressure);
         // Правильно составленный вызов функции printf
         // для данных, указанных выше, выведет следующую строку
         // |F93|25.54|755.6|
