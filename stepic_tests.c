@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 #include <windows.h>
-//Расстояние между точками на плоскости
+//площадь треугольника по двум сторонам и углу
 int main(void)
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
-    double x1=0, y1=0, x2=0, y2=0;
-    printf("Введите координаты\n");
-    scanf("%lf%lf%lf%lf", &x1, &y1, &x2, &y2);
-    printf("%.2f", sqrt(pow((x2-x1),2)+pow((y2-y1),2)));
+    double a=0, b=0, ang=0, pi=3.141593;
+    printf("Введите две стороны и угол в градусах\n");
+    scanf(" %lf %lf %lf", &a, &b, &ang);
+    printf("%.2f", 0.5*a*b*sin(ang*(pi/180)));
     return 0;
 }
 //F9 to RUN in Code::Blocks
