@@ -9,7 +9,7 @@ int main(void)
             /*if (res==found)
             {printf("%d * %d = %d\n",i,j,res);
             }*/
-            printf("%-5d", res);
+            printf("%-+5.3d", res);
             }
         printf("\n\n");
         }
