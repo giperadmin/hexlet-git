@@ -1,19 +1,17 @@
-#include <stdio.h> //F9 to RUN in Code::Blocks
+#include <stdio.h>
+#include <windows.h>
+
 int main(void)
+
 {
-    int lim=19, res, found=156;
-    for (int i = 1; i <= lim; i++){
-        for (int j = 1; j <= lim; j++)
-            {
-            res = i * j;
-            /*if (res==found)
-            {printf("%d * %d = %d\n",i,j,res);
-            }*/
-            printf("%-+5.3d", res);
-            }
-        printf("\n\n");
-        }
-
-
-    return(0);
+        SetConsoleOutputCP(1251);
+        SetConsoleCP(1251);
+        int a = 0, b = 0, res;
+        printf("¬ведите два числа: \n");
+        scanf("%d", &a);
+        scanf("%d", &b);
+        res = a + b;
+        printf("%d + %d = %d\n", a, b, res);
+        return 0;
 }
+//F9 to RUN in Code::Blocksb
