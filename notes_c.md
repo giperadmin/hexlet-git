@@ -129,3 +129,12 @@ printf("%d\n", 80 + rand();.
 
 ▲ Если нужно получить числа из отрезка [A, B], то можно воспользоваться следующей конструкцией:
 A + rand() % (B - A + 1);.
+
+■ 
+srand(time(NULL));
+printf("%d\n", 80 + rand()%(100 - 80 + 1));
+printf("%d\n", 80 + rand()%(100 - 79));
+printf("%d\n", 80 + rand()%21);
+printf("%d\n", 80 + rand()%21);
+printf("%d\n", 80 + rand()%21);
+return 0;
