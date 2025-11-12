@@ -4,14 +4,39 @@
 #include <time.h>
 #include <windows.h>
 
-/*Перевод секунд от начала дня в часы и минуты*/
+//Факториал
 int main(void)
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
-    int k=1;
-    scanf("%d",&k);
-    printf("%d %d\n", k/3600, (k%3600)/60);
+    int x=0;
+    double res=1;
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+    res = res * ++x;
+    printf("%-8.0f= %d!\n",res,x);
+
+
+
+
+
     //system("pause"); //помогает от некоторых ошибок
     return 0;
 }
