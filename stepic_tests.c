@@ -4,39 +4,44 @@
 #include <time.h>
 #include <windows.h>
 
-//‘акториал
+//„исло Ёйлера
 int main(void)
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
     int x=0;
-    double res=1;
+    double res=1, e =1;
     res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
+    e=e+1/res;
+    res = res * ++x;
+    e=e+1/res;
+    res = res * ++x;
+    e=e+1/res;
+    printf("%.5f\n",e);
 
+    res=1; e=1; x=0;
     res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
+    e=e+1/res;
     res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
+    e=e+1/res;
     res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
+    e=e+1/res;
     res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
-    res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
-    res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
-    res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
-    res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
-    res = res * ++x;
-    printf("%-8.0f= %d!\n",res,x);
+    e=e+1/res;
+    printf("%.5f\n",e);
 
-
-
-
-
+    res=1; e=1; x=0;
+    res = res * ++x;
+    e=e+1/res;
+    res = res * ++x;
+    e=e+1/res;
+    res = res * ++x;
+    e=e+1/res;
+    res = res * ++x;
+    e=e+1/res;
+    res = res * ++x;
+    e=e+1/res;
+    printf("%.5f\n",e);
     //system("pause"); //помогает от некоторых ошибок
     return 0;
 }
