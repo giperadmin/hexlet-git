@@ -4,33 +4,22 @@
 #include <time.h>
 #include <windows.h>
 
-//e^x
+//Чёт-нечет (1 или -1)
+
 int main(void)
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
 
-    int s=1;
-    double res=1, n =1, x=1, ex=1,f=1, ch=1;
-    printf("Введите степень\n");
-    scanf("%d",&s);
-    x=s;
-    ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;
-    ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;
-    ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;
-    ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;
-    ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;
+    int  k=0, e=0, isEvent=0;
+    double a=0;
+    scanf("%d",&k);
+    isEvent = k%2;
+    e=isEvent-(2*(isEvent));
+    a = pow(e,isEvent);
+    printf("%.0f\n",a);
 
-    ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;ch=ch*x;f=f*n; ex=ex+ch/f; n=n+1;
-
-
-
-    printf("%.6f\n",ex);
-    printf("%.6f\n",exp(s));
-    printf("%f\n",exp(s)-ex);
-
-
-    //system("pause"); //помогает от некоторых ошибок
+    system("pause"); //помогает от некоторых ошибок
     return 0;
 }
 //F9 to RUN in Code::Blocks
