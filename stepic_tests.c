@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <locale.h>
 
-//switch
+//switch Ќомер дн€
 
 int main(void)
 {
@@ -13,31 +13,24 @@ int main(void)
     SetConsoleCP(1251);
     setlocale(LC_ALL, "");
 
-    char sex='m';
-    int age, height, weight;
-    double bmr_male, bmr_female;
+    int m=0, d=0,n=0;
+    scanf("%d%d",&m,&d);
 
-        scanf("%c%d%d%d",&sex,&age,&height,&weight);
+     switch(m-1){
+        case 11: n+=30;
+        case 10: n+=31;
+        case 9:  n+=30;
+        case 8:  n+=31;
+        case 7:  n+=31;
+        case 6:  n+=30;
+        case 5:  n+=31;
+        case 4:  n+=30;
+        case 3:  n+=31;
+        case 2:  n+=28;
+        case 1:  n+=31;
+    }
 
-        switch (sex)
-        {
-            case 'm':
-                printf("|  BMR  |\n");
-                bmr_male = 10*weight + 6.25*height - 5*age + 5;
-                printf("|%7.2f|\n", bmr_male);
-                break;
-        case 'f':
-                printf("|  BMR  |\n");
-                bmr_female = 10*weight + 6.25*height - 5*age - 161;
-                printf("|%7.2f|\n", bmr_female);
-                break;
-        default:
-            printf("ERROR!\n");
-            break;
-
-        }
-
-
+        printf("%d\n",n+d);
 
 
     //system("pause"); //помогает от некоторых ошибок
