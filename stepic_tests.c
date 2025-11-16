@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <locale.h>
 
-//switch Произведение цифр
+//switch Конвертер прав доступа UNIX
 
 int main(void)
 {
@@ -13,31 +13,28 @@ int main(void)
     SetConsoleCP(1251);
     setlocale(LC_ALL, "");
 
-    int n=1;
-
-
-    scanf("%d",&n);
-
-     switch(n/10)
-     {
-        case(1):printf("Мне %d лет", n);break;
-        default:
-            switch(n%10){
-                    case(1): printf("Мне %d год", n);break;
-        case(2):
-        case(3):
-        case(4): printf("Мне %d года", n);break;
-        default: printf("Мне %d лет", n);break;
-
-            }
-     }
-
-
-
-
-
-
-
+    char c1,c2,c3;
+    int n=0;
+    scanf("%1c%1c%1c",&c1,&c2,&c3);
+    switch (c1)
+    {
+        case 'r': n=n+4; break;
+        case '-': n=n+0; break;
+        default: printf("Invalid format"); return 0;
+    }
+    switch (c2)
+    {
+        case 'w': n=n+2; break;
+        case '-': n=n+0; break;
+        default: printf("Invalid format"); return 0;
+    }
+    switch (c3)
+    {
+        case 'x': n=n+1; break;
+        case '-': n=n+0; break;
+        default: printf("Invalid format"); return 0;
+    }
+    printf("%d",n);
     //system("pause"); //помогает от некоторых ошибок
     return 0;
 }
