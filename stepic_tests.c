@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <locale.h>
 
-//switch Номер дня
+//switch Произведение цифр
 
 int main(void)
 {
@@ -13,24 +13,20 @@ int main(void)
     SetConsoleCP(1251);
     setlocale(LC_ALL, "");
 
-    int m=0, d=0,n=0;
-    scanf("%d%d",&m,&d);
+    int k=1;
+    int x=1;
+    int res=1;
+    scanf("%d%d",&k,&x);
 
-     switch(m-1){
-        case 11: n+=30;
-        case 10: n+=31;
-        case 9:  n+=30;
-        case 8:  n+=31;
-        case 7:  n+=31;
-        case 6:  n+=30;
-        case 5:  n+=31;
-        case 4:  n+=30;
-        case 3:  n+=31;
-        case 2:  n+=28;
-        case 1:  n+=31;
-    }
+     switch(k)
+     {
+        case 4: res=res*((x/1000)%10); //printf("%d\n",res);
+        case 3: res=res*((x/100 )%10);  //printf("%d\n",res);
+        case 2: res=res*((x/10  )%10);   //printf("%d\n",res);
+        case 1: res=res*((x/1   )%10);    //printf("%d\n",res);
+     }
 
-        printf("%d\n",n+d);
+     printf("%d\n",res);
 
 
     //system("pause"); //помогает от некоторых ошибок
