@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <locale.h>
 
-//Валидация IP-адреса
+//Умное освещение офиса
 
 int main(void)
 {
@@ -13,15 +13,13 @@ int main(void)
     SetConsoleCP(1251);
     setlocale(LC_ALL, "");
 
-    int n1=0,n2=0,n3=0,n4=0;
-    int v=0;
-    scanf("%d.%d.%d.%d", &n1,&n2,&n3,&n4);
-    v=(n1<255&&n1>=0)&&(n2<255&&n2>=0)&&(n3<255&&n3>=0)&&(n4<255&&n4>=0);
-    switch(v)
-    {
-        case 1: printf("IP is valid!\n");break;
-        case 0: printf("IP is invalid!\n");break;
-    }
+    int s1=0,s2=0,s3=0,m=0;
+    int p1=0,p2=0,p3;
+    scanf("%d%d%d%d", &s1,&s2,&s3,&m);
+    p1=(s1&&(m==0||m==1))||m==1;
+    p2=(s2&&(m==0||m==1))||m==1;
+    p3=(s3&&(m==0||m==1))||m==1;
+    printf("%d %d %d",p1,p2,p3);
 
     //system("pause"); //помогает от некоторых ошибок
     return 0;
