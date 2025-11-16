@@ -13,20 +13,29 @@ int main(void)
     SetConsoleCP(1251);
     setlocale(LC_ALL, "");
 
-    int k=1;
-    int x=1;
-    int res=1;
-    scanf("%d%d",&k,&x);
+    int n=1;
 
-     switch(k)
+
+    scanf("%d",&n);
+
+     switch(n/10)
      {
-        case 4: res=res*((x/1000)%10); //printf("%d\n",res);
-        case 3: res=res*((x/100 )%10);  //printf("%d\n",res);
-        case 2: res=res*((x/10  )%10);   //printf("%d\n",res);
-        case 1: res=res*((x/1   )%10);    //printf("%d\n",res);
+        case(1):printf("Мне %d лет", n);break;
+        default:
+            switch(n%10){
+                    case(1): printf("Мне %d год", n);break;
+        case(2):
+        case(3):
+        case(4): printf("Мне %d года", n);break;
+        default: printf("Мне %d лет", n);break;
+
+            }
      }
 
-     printf("%d\n",res);
+
+
+
+
 
 
     //system("pause"); //помогает от некоторых ошибок
