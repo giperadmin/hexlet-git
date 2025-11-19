@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <locale.h>
 
-//Умное освещение офиса
+//Радар
 
 int main(void)
 {
@@ -13,14 +13,12 @@ int main(void)
     SetConsoleCP(1251);
     setlocale(LC_ALL, "");
 
-    int s1=0,s2=0,s3=0,m=0;
-    int p1=0,p2=0,p3;
-    scanf("%d%d%d%d", &s1,&s2,&s3,&m);
-    p1=(s1&&(m==0||m==1))||m==1;
-    p2=(s2&&(m==0||m==1))||m==1;
-    p3=(s3&&(m==0||m==1))||m==1;
-    printf("%d %d %d",p1,p2,p3);
-
+    int x1,y1,x2,y2;
+    x1=y1=x2=y2=0;
+    scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
+    if(x1*x1+y1*y1<x2*x2+y2*y2){printf("1\n");}
+    else if(x1*x1+y1*y1>x2*x2+y2*y2){printf("2\n");}
+    else{printf("0\n");}
     //system("pause"); //помогает от некоторых ошибок
     return 0;
 }

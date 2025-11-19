@@ -264,3 +264,52 @@ switch (answer) {
 логическое ИЛИ ||
 присваивание =
 
+
+
+
+§6.3 Условные инструкции: if-else
+======================================
+
+В ветках if-else можно использовать любые инструкции языка Си, в том числе и if-else.
+
+#include <stdio.h>
+
+int main(void)
+{
+        double x;
+        scanf("%lf", &x); 
+        
+        if (x < 0) {
+                printf("%f\n", -x);
+        } else {
+                printf("%f\n", x);
+        }      
+
+        return 0;
+}
+
+Ветка else всегда относится к ближайшему if, у которого нет своего else.
+
+■ Лесенка из вложенных if-else
+
+#include <stdio.h>
+
+int main(void)
+{
+        int score, new_score;
+        scanf("%d", &score);
+
+        if (score >= 90) {
+                new_score = 5;
+        } else if (score >= 70) {
+                new_score = 4;
+        } else if (score >= 50) {
+                new_score = 3;
+        } else {
+                new_score = 2;
+        }
+
+        printf("score: %d\n", new_score);
+
+        return 0;
+}
