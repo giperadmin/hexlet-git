@@ -20,6 +20,7 @@ int main(void)
     else if(x1*x1+y1*y1>x2*x2+y2*y2){printf("2\n");}
     else{printf("0\n");}
     //system("pause"); //помогает от некоторых ошибок
+
     return 0;
 }
 //F9 to RUN in Code::Blocks

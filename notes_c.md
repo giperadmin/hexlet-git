@@ -217,10 +217,13 @@ switch (answer) {
         case 'd': 
                 printf("BAD!\n");
                 break;
-        default: // 
-                printf("ERROR!\n"); 
+
+        default: // Ветка default не является обязательной.
+
+        	printf("ERROR!\n"); 
                 break;
 }   <...>
+
 
 ■ Ветка default не является обязательной, но лучше всегда добавлять её в конце инструкции switch.
 
@@ -313,3 +316,4 @@ int main(void)
 
         return 0;
 }
+
