@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <locale.h>
 
-//Фиббоначи
+//Перевёртыш (анаграмма числа)
 
 int main(void)
 {
@@ -13,11 +13,17 @@ int main(void)
     SetConsoleCP(1251);
     setlocale(LC_ALL, "");
 
-    int i=0,n=0,count=1;
+    int i=0, n=0, c=0;
     scanf("%d",&n);
-    for(i=2; i<=n/2; i++)
-        if (n%i==0){count=0;}
-    printf("%d",count);
+    //n=12938;
+    printf("%d\n",n);
+    for(i=10; (n*10)/i!=0; i=i*10){
+        c=(n%i)/(i/10);
+        printf("%d",c);}
+
+
+
+
     //system("pause"); //помогает от некоторых ошибок
     return 0;
 }
