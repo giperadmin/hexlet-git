@@ -13,27 +13,27 @@ int main(void)
     SetConsoleCP(1251);
     setlocale(LC_ALL, "");
 
-    int a=1,b=1,i=1,nod=1,min=0,max=0,p=0;
-    double mult, nok;
-    //a=6; b=7;
-    scanf("%d%d",&a,&b);
-    if(a==b){printf("%d",a); return 0;}
-    max=a; min = b;
-    if (a<b) {max=b; min=a;}
-    mult=a*b;
-    for (i=1; i<=max/2; i++)
-        {
-        p=i*((min%i==0)&&(max%i==0));
-        if(p) nod=p;
-       // printf("min=%d, max=%d, i=%d, усл.1 => %d, усл.2 => %d, усл.общ. =>%d, i*усл.общ.=%d, nod=%d\n"
-        //       ,min,max,i,min%i==0,max%i==0,((min%i==0)&&(max%i==0)),i*((min%i==0)&&(max%i==0)),nod);
+    int N=1, max=0, min=0, imax=0,imin=0, x=0, i=0;
+    double M=0;
+    scanf("%d",&N); printf("\n");
+    int arr[N];
+    for(i=0; i<N; i++) scanf("%d",&arr[i]);
+    min=max=arr[0];
+    for(i=0; i<N; i++)
+                {if (arr[i]<=min) {min=arr[i]; imin=i;}
+                if (arr[i]>=max) {max=arr[i]; imax=i;}}
 
-        }
+    printf("\n\nmin=%d max=%d\n\n",min,max);
+    for (i=0;i<N;i++) {
+            x=arr[i];
+            if (x==max) printf("%d ",min);
+            else if (x==min) printf("%d ",max);
+            else printf("%d ",x);
+    }
 
-    nok=mult/nod;
-    if (nod==1) nok=mult;
-    //printf("%d %d %d mult=%.0f nok=%.0f",a,b,nod,mult,nok);
-    printf("%.0f", nok);
+
+
+
     //system("pause"); //помогает от некоторых ошибок
     return 0;
 }
